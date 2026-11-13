@@ -4,6 +4,7 @@ The Zod schemas in `src/contracts/` are the source of truth. `npm run contracts:
 writes JSON Schema to `src/contracts/generated/*.schema.json`. TypeScript types are
 `z.infer` of the same schemas, so producer and consumer cannot drift. Valid and invalid fixtures
 live in `src/contracts/fixtures/` and are asserted by `tests/unit/contracts.test.ts`.
+r2 (2026-11-13): CI regenerates the JSON Schemas and fails if they differ from the committed files (001-T16).
 
 | Contract | File | Version |
 |---|---|---|

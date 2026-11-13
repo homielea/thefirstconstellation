@@ -19,3 +19,5 @@ Flags: S = schema change, P = permissions, V = provider, C = cost.
 | 001-T12 | Tenant isolation across pages, API and stream | SEC-001, SEC-002 | tests only | `tests/integration/tenancy.test.ts`, e2e 404 | T11 | P |
 | 001-T13 | Eval suite (≥5 fixtures) + runner | OBS-002, AGT-008 | `evals/*` | `npm run eval` (fake) results file | T09 | C |
 | 001-T14 | Live baseline run under the cap | OBS-003 | `specs/001/verification.md` | recorded run | T13 + Anthropic key | V,C |
+| 001-T15 | Keyboard-only e2e for sign-in, save, version history and cancel; live-region announcement count | ACC-001, ACC-002 | `tests/e2e/run.mjs` | `npm run e2e` (13 tests) | T11 | — |
+| 001-T16 | CI fails when generated JSON Schemas differ from the Zod contracts | AGT-002, DAT-002 | `.github/workflows/ci.yml` | CI step "Generated JSON Schemas match the Zod contracts" | T02 | — |

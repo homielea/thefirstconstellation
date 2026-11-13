@@ -10,7 +10,7 @@ Playwright 1.63) · Providers: fake (deterministic) unless stated · Commit: see
 | Unit | `npm test` | 39/39 pass (plan, state, pricing, redaction, integrity, contracts, token contrast) |
 | Integration (real Postgres) | `npm run test:integration` | 21/21 pass, stable over 3 consecutive runs |
 | Build | `npm run build` | pass |
-| Browser e2e (production build + worker) | `npm run e2e` | 10/10 pass |
+| Browser e2e (production build + worker) | `npm run e2e` | 13/13 pass (r2: adds keyboard-only sign-in, version history and cancel) |
 | Evaluations (fake) | `npm run eval` | 8/8 fixtures structural pass (`evals/results/2026-11-13.fake.json`) |
 
 Requirement-level mapping: `specs/traceability.md`.
@@ -43,7 +43,8 @@ Observed: plan step numbering and status chips fit at 320 px; long objectives wr
 - **OBS-003 live baseline, and live checks of AGT-008, INT-001 and SEC-003.** Blocked: no Anthropic API key in this
   environment. The cloud session's own Anthropic access cannot be used by app code, and the credential form refuses
   Anthropic hosts. Brave Search is connected (probe returned HTTP 200).
-- Screen-reader review (ACC-002) and keyboard assertions for sign-in and cancel (ACC-001).
+- Screen-reader review (ACC-002): needs a person with VoiceOver or NVDA. Keyboard assertions (ACC-001) were closed in
+  r2 (001-T15); the live region is checked automatically for one announcement per transition.
 - Staging demonstration. Hosting is to be decided at the end of Phase 0 (owner decision).
 - Two-user collaboration in the UI (the second member exists in seed data, but is exercised only via tenancy and roles in this slice).
 

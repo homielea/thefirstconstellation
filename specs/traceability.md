@@ -50,8 +50,8 @@ Test paths: U = `tests/unit/*`, I = `tests/integration/*`, E = `tests/e2e/run.mj
 | OBS-001 | exp §2.2 | td §9 | 001-T09 | I model executions recorded with cost; E run history | Verified |
 | OBS-002 | — | — | 001-T13 | V 8 fixtures, 100% structural (fake) | Verified |
 | OBS-003 | — | td §8 | 001-T14 | — blocked: no Anthropic API key in this environment | Approved (blocked) |
-| ACC-001 | exp §4 | — | 001-T11 | E keyboard: composer → submit → open brief → edit. Sign-in and cancel by keyboard not yet asserted | Implemented |
-| ACC-002 | exp §7 | — | 001-T11 | E landmarks; live region in code. **Screen-reader review not done** | Implemented |
+| ACC-001 | exp §4 | — | 001-T11, 001-T15 | E keyboard only, with focus indicator asserted: sign-in request, composer → submit, open brief → edit → save, version history, cancel (focus to question and back) | Verified |
+| ACC-002 | exp §7 | — | 001-T11, 001-T15 | E landmarks; E live region announces each transition once, ending with completion. **Screen-reader review not done (needs a person with VoiceOver/NVDA)** | Implemented |
 | ACC-003 | tokens.md | — | 001-T01 | U contrast for all text/surface pairs | Verified |
 | ACC-004 | exp §6 | — | 001-T11 | E 320 px no horizontal scroll ×3 views | Verified |
 | ACC-005 | — | — | 001-T11 | E axe: room, mission, artifact (no serious/critical) | Verified |

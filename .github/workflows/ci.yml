@@ -28,6 +28,8 @@ jobs:
       - run: npm ci
       - run: npx playwright install --with-deps chromium
       - run: npm run typecheck
+      - name: Generated JSON Schemas match the Zod contracts
+        run: npm run contracts:export && git diff --exit-code -- src/contracts/generated
       - run: npm test
       - run: npm run test:integration
       - run: npm run build
