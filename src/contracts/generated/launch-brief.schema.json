@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "launch-brief@1"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 200
+    },
+    "sections": {
+      "minItems": 1,
+      "maxItems": 20,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "enum": [
+              "overview",
+              "audience",
+              "positioning",
+              "key_messages",
+              "channels",
+              "risks",
+              "next_steps"
+            ]
+          },
+          "heading": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 20000
+          }
+        },
+        "required": [
+          "key",
+          "heading",
+          "body"
+        ]
+      }
+    }
+  },
+  "required": [
+    "version",
+    "title",
+    "sections"
+  ]
+}

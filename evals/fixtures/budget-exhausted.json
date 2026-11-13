@@ -1,0 +1,21 @@
+{
+  "id": "budget-exhausted",
+  "description": "Tiny budget: pause before another model call.",
+  "request": "Draft a launch brief for Tidewater's March beta.",
+  "library": [
+    {
+      "title": "Tidewater positioning notes (sample)",
+      "body": "Tidewater is a calm planning app for small creative studios. It turns client briefs into a shared weekly plan. Launch: March public beta. Pricing is not decided."
+    },
+    {
+      "title": "Beta interview summary (sample)",
+      "body": "Six studio leads interviewed. Five said weekly planning takes more than two hours. Four find general project tools too heavy."
+    }
+  ],
+  "budgetUsd": 0.0001,
+  "expect": {
+    "status": "blocked",
+    "blockedReason": "budget_reached",
+    "maxModelCalls": 1
+  }
+}

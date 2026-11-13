@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "seq": {
+      "type": "integer",
+      "exclusiveMinimum": 0,
+      "maximum": 9007199254740991
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "plan.saved",
+        "step.started",
+        "step.tool",
+        "step.attempt_failed",
+        "step.completed",
+        "step.failed",
+        "step.cancelled",
+        "step.retried",
+        "mission.running",
+        "mission.blocked",
+        "mission.completed",
+        "mission.failed",
+        "mission.cancelled"
+      ]
+    },
+    "at": {
+      "type": "string"
+    },
+    "stepKey": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "agentName": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "data": {
+      "type": "object",
+      "propertyNames": {
+        "type": "string"
+      },
+      "additionalProperties": {}
+    }
+  },
+  "required": [
+    "seq",
+    "type",
+    "at",
+    "stepKey",
+    "agentName",
+    "message",
+    "data"
+  ]
+}

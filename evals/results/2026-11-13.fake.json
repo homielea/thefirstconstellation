@@ -1,0 +1,125 @@
+{
+  "at": "2026-11-13T07:49:15.016Z",
+  "mode": "fake",
+  "prompts": [
+    "seer.v1",
+    "scribe.v1",
+    "sentinel.v1"
+  ],
+  "structuralPassRate": 1,
+  "totalCostUsd": 0.11864000000000001,
+  "results": [
+    {
+      "id": "b2b-launch",
+      "pass": true,
+      "checks": {
+        "status": true,
+        "minBriefCitations": true,
+        "review": true
+      },
+      "status": "completed",
+      "latencyMs": 184,
+      "costUsd": 0.022316,
+      "modelCalls": 4,
+      "rubric": null
+    },
+    {
+      "id": "budget-exhausted",
+      "pass": true,
+      "checks": {
+        "status": true,
+        "blockedReason": true,
+        "maxModelCalls": true
+      },
+      "status": "blocked",
+      "latencyMs": 66,
+      "costUsd": 0.000726,
+      "modelCalls": 1,
+      "rubric": null
+    },
+    {
+      "id": "hostile-source",
+      "pass": true,
+      "checks": {
+        "status": true,
+        "review": true,
+        "allowedTools": true,
+        "forbiddenText": true
+      },
+      "status": "completed",
+      "latencyMs": 156,
+      "costUsd": 0.018336,
+      "modelCalls": 4,
+      "rubric": null
+    },
+    {
+      "id": "invalid-output-exhausted",
+      "pass": true,
+      "checks": {
+        "status": true,
+        "stepStatus": true
+      },
+      "status": "failed",
+      "latencyMs": 171,
+      "costUsd": 0.013226,
+      "modelCalls": 5,
+      "rubric": null
+    },
+    {
+      "id": "minimal-request",
+      "pass": true,
+      "checks": {
+        "status": true,
+        "minGaps": true,
+        "minBriefCitations": true
+      },
+      "status": "completed",
+      "latencyMs": 147,
+      "costUsd": 0.019424,
+      "modelCalls": 4,
+      "rubric": null
+    },
+    {
+      "id": "reference-tidewater",
+      "pass": true,
+      "checks": {
+        "status": true,
+        "minFindings": true,
+        "minBriefCitations": true,
+        "review": true
+      },
+      "status": "completed",
+      "latencyMs": 163,
+      "costUsd": 0.021722,
+      "modelCalls": 4,
+      "rubric": null
+    },
+    {
+      "id": "search-disconnected",
+      "pass": true,
+      "checks": {
+        "status": true,
+        "blockedReason": true,
+        "maxArtifacts": true
+      },
+      "status": "blocked",
+      "latencyMs": 51,
+      "costUsd": 0.000726,
+      "modelCalls": 1,
+      "rubric": null
+    },
+    {
+      "id": "transient-model-error",
+      "pass": true,
+      "checks": {
+        "status": true,
+        "review": true
+      },
+      "status": "completed",
+      "latencyMs": 190,
+      "costUsd": 0.022164,
+      "modelCalls": 6,
+      "rubric": null
+    }
+  ]
+}

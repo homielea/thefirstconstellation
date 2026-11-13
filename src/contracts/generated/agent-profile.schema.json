@@ -1,0 +1,130 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "agent-profile@1"
+    },
+    "archetype": {
+      "type": "string",
+      "enum": [
+        "navigator",
+        "seer",
+        "scribe",
+        "maker",
+        "weaver",
+        "keeper",
+        "sentinel"
+      ]
+    },
+    "properName": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 40
+    },
+    "nameIsWorking": {
+      "type": "boolean"
+    },
+    "epithet": {
+      "type": "string",
+      "maxLength": 120
+    },
+    "pronouns": {
+      "anyOf": [
+        {
+          "type": "string",
+          "maxLength": 30
+        },
+        {
+          "type": "null"
+        }
+      ]
+    },
+    "communicationStyle": {
+      "type": "string",
+      "enum": [
+        "concise",
+        "balanced",
+        "expansive"
+      ]
+    },
+    "visual": {
+      "type": "object",
+      "properties": {
+        "seed": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "symbolFamily": {
+          "type": "string",
+          "enum": [
+            "compass",
+            "eye",
+            "quill",
+            "anvil",
+            "thread",
+            "lantern",
+            "shield"
+          ]
+        },
+        "coreForm": {
+          "type": "string",
+          "enum": [
+            "sphere",
+            "octahedron",
+            "torus",
+            "prism"
+          ]
+        },
+        "ringDensity": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 4
+        },
+        "lightTemperature": {
+          "type": "string",
+          "enum": [
+            "cool",
+            "neutral",
+            "warm"
+          ]
+        },
+        "motionTemperament": {
+          "type": "string",
+          "enum": [
+            "still",
+            "calm",
+            "lively"
+          ]
+        }
+      },
+      "required": [
+        "seed",
+        "symbolFamily",
+        "coreForm",
+        "ringDensity",
+        "lightTemperature",
+        "motionTemperament"
+      ]
+    },
+    "toolGrants": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "required": [
+    "version",
+    "archetype",
+    "properName",
+    "nameIsWorking",
+    "epithet",
+    "pronouns",
+    "communicationStyle",
+    "visual",
+    "toolGrants"
+  ]
+}

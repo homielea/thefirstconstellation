@@ -1,0 +1,31 @@
+{
+  "id": "invalid-output-exhausted",
+  "description": "Invalid output three times: fail the step, dependents never start.",
+  "fakeOnly": true,
+  "request": "Draft a launch brief for Tidewater's March beta.",
+  "library": [
+    {
+      "title": "Tidewater positioning notes (sample)",
+      "body": "Tidewater is a calm planning app for small creative studios. It turns client briefs into a shared weekly plan. Launch: March public beta. Pricing is not decided."
+    },
+    {
+      "title": "Beta interview summary (sample)",
+      "body": "Six studio leads interviewed. Five said weekly planning takes more than two hours. Four find general project tools too heavy."
+    }
+  ],
+  "faults": [
+    {
+      "schema": "scribe.brief@1",
+      "kind": "invalid",
+      "times": 3
+    }
+  ],
+  "expect": {
+    "status": "failed",
+    "stepStatus": {
+      "research": "completed",
+      "draft": "failed",
+      "review": "pending"
+    }
+  }
+}

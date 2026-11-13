@@ -1,0 +1,45 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string",
+            "enum": [
+              "overview",
+              "audience",
+              "positioning",
+              "key_messages",
+              "channels",
+              "risks",
+              "next_steps"
+            ]
+          },
+          "heading": {
+            "type": "string"
+          },
+          "body": {
+            "type": "string",
+            "description": "Plain text. Cite sources inline with markers like [W1] or [L2]."
+          }
+        },
+        "required": [
+          "key",
+          "heading",
+          "body"
+        ]
+      }
+    }
+  },
+  "required": [
+    "title",
+    "sections"
+  ]
+}
