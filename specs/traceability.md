@@ -62,4 +62,6 @@ Test paths: U = `tests/unit/*`, I = `tests/integration/*`, E = `tests/e2e/run.mj
 SHOULD: EXP-008 Verified (E version attribution). PERF-002 Deferred: Next 16 build output no longer
 prints first-load sizes. A bundle-size check is added in slice 002, when the 3D bundle arrives.
 
-Later slices (002–006) have briefs only. Their requirements get IDs when they reach Approved.
+Later slices (003–006) have briefs only. Their requirements get IDs when they reach Approved.
+
+Slice 002 has a full Draft spec (r1, 2026-11-13). Its rows are added here when the owner approves it.
