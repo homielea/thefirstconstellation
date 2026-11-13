@@ -1,0 +1,27 @@
+{
+  "id": "transient-model-error",
+  "description": "One model error is retried and recovered.",
+  "fakeOnly": true,
+  "request": "Draft a launch brief for Tidewater's March beta.",
+  "library": [
+    {
+      "title": "Tidewater positioning notes (sample)",
+      "body": "Tidewater is a calm planning app for small creative studios. It turns client briefs into a shared weekly plan. Launch: March public beta. Pricing is not decided."
+    },
+    {
+      "title": "Beta interview summary (sample)",
+      "body": "Six studio leads interviewed. Five said weekly planning takes more than two hours. Four find general project tools too heavy."
+    }
+  ],
+  "faults": [
+    {
+      "schema": "seer.findings@1",
+      "kind": "error",
+      "times": 1
+    }
+  ],
+  "expect": {
+    "status": "completed",
+    "review": true
+  }
+}

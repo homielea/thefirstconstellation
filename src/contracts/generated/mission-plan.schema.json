@@ -1,0 +1,156 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string",
+      "const": "mission-plan@1"
+    },
+    "templateId": {
+      "type": "string"
+    },
+    "objective": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 4000
+    },
+    "assumptions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "inputsRequired": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "key": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          }
+        },
+        "required": [
+          "key",
+          "description",
+          "required"
+        ]
+      }
+    },
+    "steps": {
+      "minItems": 1,
+      "maxItems": 12,
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^[a-z][a-z0-9_-]{0,39}$"
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 120
+          },
+          "agentArchetype": {
+            "type": "string",
+            "enum": [
+              "navigator",
+              "seer",
+              "scribe",
+              "maker",
+              "weaver",
+              "keeper",
+              "sentinel"
+            ]
+          },
+          "dependsOn": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "allowedTools": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "expectedOutput": {
+            "type": "object",
+            "properties": {
+              "artifactType": {
+                "type": "string"
+              },
+              "description": {
+                "type": "string",
+                "minLength": 1
+              }
+            },
+            "required": [
+              "description"
+            ]
+          },
+          "approvalPolicy": {
+            "type": "string",
+            "enum": [
+              "none",
+              "before_external_action"
+            ]
+          }
+        },
+        "required": [
+          "id",
+          "title",
+          "agentArchetype",
+          "dependsOn",
+          "allowedTools",
+          "expectedOutput",
+          "approvalPolicy"
+        ]
+      }
+    },
+    "estimatedUsage": {
+      "type": "object",
+      "properties": {
+        "modelCalls": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "costBand": {
+          "type": "string",
+          "enum": [
+            "low",
+            "medium",
+            "high"
+          ]
+        }
+      },
+      "required": [
+        "modelCalls",
+        "costBand"
+      ]
+    },
+    "budgetUsd": {
+      "type": "number",
+      "exclusiveMinimum": 0,
+      "maximum": 100
+    }
+  },
+  "required": [
+    "version",
+    "objective",
+    "assumptions",
+    "inputsRequired",
+    "steps",
+    "estimatedUsage",
+    "budgetUsd"
+  ]
+}

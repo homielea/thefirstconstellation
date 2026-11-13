@@ -1,0 +1,16 @@
+{
+  "id": "b2b-launch",
+  "description": "Different domain: B2B developer tool launch.",
+  "request": "Draft a launch brief for an open-source database migration tool aimed at platform teams.",
+  "library": [
+    {
+      "title": "Product one-pager (sample)",
+      "body": "Shiftwell runs reversible schema migrations with automatic rollback plans. Target: platform teams at 50\u2013500 person companies. Launching on Hacker News and at a conference in May."
+    }
+  ],
+  "expect": {
+    "status": "completed",
+    "minBriefCitations": 2,
+    "review": true
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "id": "minimal-request",
+  "description": "Vague request with no library: research must state gaps.",
+  "request": "Draft a launch brief for a new note-taking app for nurses.",
+  "library": [],
+  "expect": {
+    "status": "completed",
+    "minGaps": 1,
+    "minBriefCitations": 1
+  }
+}

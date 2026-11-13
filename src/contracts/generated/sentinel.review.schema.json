@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "properties": {
+    "summary": {
+      "type": "string"
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "severity": {
+            "type": "string",
+            "enum": [
+              "info",
+              "caution",
+              "problem"
+            ]
+          },
+          "sectionKey": {
+            "type": "string",
+            "enum": [
+              "overview",
+              "audience",
+              "positioning",
+              "key_messages",
+              "channels",
+              "risks",
+              "next_steps"
+            ]
+          },
+          "issue": {
+            "type": "string"
+          },
+          "rationale": {
+            "type": "string"
+          }
+        },
+        "required": [
+          "severity",
+          "sectionKey",
+          "issue",
+          "rationale"
+        ]
+      }
+    }
+  },
+  "required": [
+    "summary",
+    "findings"
+  ]
+}
