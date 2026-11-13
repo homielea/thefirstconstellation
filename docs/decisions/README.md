@@ -9,3 +9,4 @@
 | [0005](0005-frontend-and-3d.md) | Frontend stack and 3D approach | Accepted (3D provisional) |
 | 0006 | Email provider | To write in slice 005 |
 | 0007 | Retrieval and embeddings | To write in slice 004 (pgvector not installed locally) |
+| [0008](0008-google-sign-in-client.md) | Google sign-in client | Proposed (slice 002b, owner decision D5) |
