@@ -1,8 +1,7 @@
 # 000 — Product foundation brief
 
 Revision: r1 (2026-11-13). Sources: `First-Constellation-MVP-build-spec.md` v1.0 and
-`Spec-driven-design-and-development.md`, supplied by the owner in the build conversation. They are to be
-committed to `/docs/source/` (open item in HANDOFF.md).
+`Spec-driven-design-and-development.md`, supplied by the owner and kept verbatim in `/docs/source/`.
 
 ## Person and situation
 A founder, consultant, agency lead or small team who repeatedly researches, writes, reviews
